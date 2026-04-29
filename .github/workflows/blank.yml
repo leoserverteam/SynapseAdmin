@@ -1,0 +1,17 @@
+name: Deploy App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-deploy:
+    uses: leoserverteam/DevOpsTemplates/.github/workflows/onlycompose.yml@main
+    with:
+      project_name: "Synapse-admin"
+
+  call-nginx:
+    uses: leoserverteam/DevOpsTemplates/.github/workflows/deploynginx.yml@main
+    with:
+      conf_source_dir: "synapseadmin.conf"
