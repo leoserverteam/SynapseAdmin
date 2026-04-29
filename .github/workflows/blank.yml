@@ -14,4 +14,4 @@ jobs:
   call-nginx:
     uses: leoserverteam/DevOpsTemplates/.github/workflows/deploynginx.yml@main
     with:
-      conf_source_dir: "synapseadmin.conf"
+      conf_source_dir: "*.conf"
